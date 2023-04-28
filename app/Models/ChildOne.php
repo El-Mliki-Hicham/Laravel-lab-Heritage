@@ -9,8 +9,11 @@ class ChildOne extends Person
 {
     use HasFactory;
 
-    function name(){
-        return 'my name is amin Im the first child';
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+
+        $this->attributes['child_type'] = 'childOne';
     }
 
 }

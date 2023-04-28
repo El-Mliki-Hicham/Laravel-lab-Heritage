@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class ChildTwo extends Person
 {
     use HasFactory;
-    function name(){
-        return 'my name is amal Im the second child';
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+
+        $this->attributes['child_type'] = 'childTwo';
     }
 }

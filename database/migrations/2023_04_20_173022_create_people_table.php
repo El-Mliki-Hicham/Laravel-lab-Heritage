@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('gender');
+            $table->string('child_type')->nullable();
             $table->timestamps();
         });
     }
